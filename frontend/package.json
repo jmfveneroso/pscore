@@ -29,7 +29,8 @@
     "url-loader": "0.6.2",
     "webpack": "3.10.0",
     "webpack-bundle-tracker": "^0.3.0",
-    "webpack-dev-server": "2.11.1"
+    "webpack-dev-server": "2.11.1",
+    "webpack-merge": "^4.1.2"
   },
   "dependencies": {
     "bootstrap": "4.0.0",
@@ -47,8 +48,8 @@
     "simple-line-icons": "2.4.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --color --inline --host 0.0.0.0 --hot --watch",
-    "build": "webpack -p --progress",
+    "start": "webpack-dev-server --progress --color --inline --host 0.0.0.0 --hot --watch --config webpack.dev.js",
+    "build": "webpack -p --progress --config webpack.prod.js",
     "clean": "rimraf ./build"
   },
   "engines": {

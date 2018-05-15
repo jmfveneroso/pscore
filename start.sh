@@ -11,5 +11,17 @@ if [[ $DEBUG == *1* ]]; then
   cd ..
 fi
 
-# Start server.
-python manage.py runserver 0.0.0.0:8000
+# Tries to start server 10 times.
+COUNT=0
+MAX_TRIES=10
+while [ $COUNT -lt $MAX_TRIES ]; do
+  python manage.py runserver 0.0.0.0:8000
+  if [ $? -eq 0 ];then
+    exit 0
+  fi
+  sleep 10
+  let COUNT=COUNT+1
+done
+
+echo "Server start failed too many times."
+exit 1
