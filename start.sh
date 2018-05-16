@@ -15,7 +15,7 @@ fi
 COUNT=0
 MAX_TRIES=10
 while [ $COUNT -lt $MAX_TRIES ]; do
-  python manage.py runserver 0.0.0.0:8000
+  python manage.py runserver 0.0.0.0:80
   if [ $? -eq 0 ];then
     exit 0
   fi
