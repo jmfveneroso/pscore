@@ -38,3 +38,5 @@ RUN npm install -g jsdoc
 
 # Build assets.
 RUN cd /code/frontend && npm install && npm run build
+
+CMD ["start.sh"]
