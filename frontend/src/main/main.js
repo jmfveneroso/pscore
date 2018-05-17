@@ -13,7 +13,7 @@ class Main extends Component {
         <div className="app-body">
           <main className="main">
             <Container fluid>
-	      <div>Example</div>
+	      <div>Example 2</div>
             </Container>
           </main>
         </div>
