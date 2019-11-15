@@ -5,6 +5,8 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Add VIM and Git to allow manual maintenance.
 RUN apt-get update && apt-get install -y \
+  zlib1g-dev \
+  libjsoncpp-dev \ 
   vim \
   git
 
